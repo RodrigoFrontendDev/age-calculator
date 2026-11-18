@@ -136,9 +136,6 @@ function renderResult(age, birthDate, today) {
       ? "¡Hoy empieza tu primer día!"
       : "Así se ve tu tiempo hasta hoy.";
 
-  const birthdayToday =
-    birthDate.month === today.month && birthDate.day === today.day;
-
   const observedBirthdayDay = Math.min(
     birthDate.day,
     daysInMonth(today.year, birthDate.month),
