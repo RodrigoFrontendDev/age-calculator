@@ -2,6 +2,7 @@ const form = document.getElementById("age-form");
 const birthdayInput = document.getElementById("birthday");
 const message = document.getElementById("form-message");
 const placeholder = document.getElementById("result-placeholder");
+const placeholderCopy = document.getElementById("placeholder-copy");
 const resultContent = document.getElementById("result-content");
 const yearsOutput = document.getElementById("age-years");
 const yearsLabel = document.getElementById("years-label");
@@ -119,7 +120,8 @@ function clearMessage() {
 function showError(text) {
   message.textContent = text;
   birthdayInput.setAttribute("aria-invalid", "true");
-  placeholder.hidden = true;
+  placeholderCopy.textContent = "Revisá la fecha para ver el resultado.";
+  placeholder.hidden = false;
   resultContent.hidden = true;
   birthdayInput.focus();
 }
@@ -137,7 +139,14 @@ function renderResult(age, birthDate, today) {
   const birthdayToday =
     birthDate.month === today.month && birthDate.day === today.day;
 
-  if (birthdayToday) {
+  const observedBirthdayDay = Math.min(
+    birthDate.day,
+    daysInMonth(today.year, birthDate.month),
+  );
+  const isBirthdayToday =
+    birthDate.month === today.month && observedBirthdayDay === today.day;
+
+  if (isBirthdayToday) {
     birthdayNote.textContent = "¡Feliz cumpleaños!";
   } else {
     const daysUntilBirthday = getNextBirthday(birthDate, today);
@@ -147,6 +156,7 @@ function renderResult(age, birthDate, today) {
         : `Tu próximo cumpleaños es en ${daysUntilBirthday} días.`;
   }
 
+  placeholderCopy.textContent = "Tu resultado va a aparecer acá.";
   placeholder.hidden = true;
   resultContent.hidden = false;
 }
