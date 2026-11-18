@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b111d">
+  <meta name="theme-color" content="#eeeae1">
   <meta name="description" content="Calculá tu edad en años, meses y días con una herramienta simple y precisa.">
-  <title>Age Calculator — Calculá tu edad</title>
+  <title>Age Calculator — Tu edad, al detalle</title>
   <link rel="stylesheet" href="style.css">
   <script src="index.js" defer></script>
 </head>
@@ -13,48 +13,48 @@
   <div class="page-shell">
     <header class="topbar">
       <a class="brand" href="./" aria-label="Age Calculator, inicio">
-        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span class="brand-name">AGE<span>/</span>CALCULATOR</span>
+        <span class="brand-monogram">AC</span>
+        <span class="brand-name">THE AGE OFFICE</span>
       </a>
-      <span class="topbar-note">Una forma simple de medir el tiempo</span>
+      <span class="topbar-note">EDICIÓN DIGITAL <strong>· 01</strong></span>
     </header>
 
     <main class="main-layout">
       <section class="intro" aria-labelledby="page-title">
-        <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> FECHA DE NACIMIENTO · EDAD ACTUAL</p>
-        <h1 id="page-title">El tiempo que llevás<br><em>siendo vos.</em></h1>
-        <p class="intro-copy">Cada fecha cuenta una historia. Ingresá tu nacimiento y descubrí exactamente cuántos años, meses y días pasaron.</p>
+        <p class="eyebrow">TIEMPO PERSONAL <span> / </span> 001</p>
+        <h1 id="page-title">No es solo<br>una fecha.<br><em>Es tu historia.</em></h1>
+        <p class="intro-copy">Los años cuentan una parte. Los meses y los días completan el cuadro. Poné tu fecha de nacimiento y mirá el tiempo desde otra perspectiva.</p>
 
         <div class="intro-note">
-          <span class="note-number">01</span>
-          <p>Un cálculo claro, sin vueltas.<br><span>Solo necesitás tu fecha de nacimiento.</span></p>
+          <span class="note-number">01 /</span>
+          <p>UN CÁLCULO PRECISO<br><span>Sin registros, sin vueltas. Solo tu fecha.</span></p>
         </div>
+        <span class="background-index" aria-hidden="true">TIME</span>
       </section>
 
       <section class="calculator" aria-labelledby="calculator-title">
         <div class="calculator-heading">
-          <p class="section-kicker">CALCULADORA PERSONAL</p>
-          <h2 id="calculator-title">Calculá tu edad</h2>
-          <p>¿Cuándo es tu cumpleaños?</p>
+          <p class="section-kicker">AGE REPORT <span>—</span> 2026</p>
+          <h2 id="calculator-title">Tu edad, al detalle.</h2>
+          <p>Primero, una fecha.</p>
         </div>
 
         <form id="age-form" novalidate>
-          <label for="birthday">Fecha de nacimiento</label>
+          <label for="birthday">NACISTE EL</label>
           <div class="date-control">
             <input type="date" id="birthday" name="birthday" required autocomplete="bday">
-            <span class="date-hint" aria-hidden="true">DÍA / MES / AÑO</span>
           </div>
           <p class="form-message" id="form-message" role="alert" aria-live="polite"></p>
           <button class="calculate-button" type="submit">
-            <span>Calcular edad</span>
-            <span class="button-arrow" aria-hidden="true">→</span>
+            <span>Revelar mi edad</span>
+            <span class="button-arrow" aria-hidden="true">↗</span>
           </button>
         </form>
 
         <section class="result" id="result" aria-label="Resultado de tu edad" aria-live="polite">
           <div class="result-placeholder" id="result-placeholder">
             <span class="placeholder-mark" aria-hidden="true">—</span>
-            <p id="placeholder-copy">Tu resultado va a aparecer acá.</p>
+            <p id="placeholder-copy">Tu resultado aparece acá.</p>
           </div>
 
           <div class="result-content" id="result-content" hidden>
@@ -65,20 +65,20 @@
             </div>
 
             <div class="age-details" aria-label="Detalle de edad">
-              <div class="age-detail"><strong id="age-months">0</strong><span>meses</span></div>
-              <div class="age-detail"><strong id="age-days">0</strong><span>días</span></div>
+              <div class="age-detail"><strong id="age-months">0</strong><span>MESES</span></div>
+              <div class="age-detail"><strong id="age-days">0</strong><span>DÍAS</span></div>
             </div>
             <p class="birthday-note" id="birthday-note"></p>
           </div>
         </section>
-
-        <p class="calculator-footnote">El cálculo toma la fecha local de tu dispositivo.</p>
+        <p class="calculator-footnote">CÁLCULO SEGÚN LA FECHA LOCAL DE TU DISPOSITIVO</p>
       </section>
     </main>
 
     <footer class="page-footer">
-      <span>AGE / CALCULATOR</span>
-      <span>El tiempo, puesto en perspectiva.</span>
+      <span>THE AGE OFFICE <i>®</i></span>
+      <span>EL TIEMPO, PUESTO EN PERSPECTIVA.</span>
+      <span>2026 <b>·</b> 001</span>
     </footer>
   </div>
 </body>
